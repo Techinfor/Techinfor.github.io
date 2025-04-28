@@ -138,9 +138,13 @@ p {
 }
 
 .aboutMe a {
-    color: var(--first-color);
+    font-weight: 500;
 }
 
+.aboutMe a:hover {
+    font-weight: 500;
+    color: var(--first-color);   
+}
 
 
 .max-width .line {
