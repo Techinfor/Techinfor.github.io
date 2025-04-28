@@ -1,228 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-  <title>Techinfor</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: "Poppins", sans-serif
-    }
-
-    body {
-      font-size: 16px;
-    }
-
-    .w3-half img {
-      margin-bottom: -6px;
-      margin-top: 16px;
-      opacity: 0.8;
-      cursor: pointer
-    }
-
-    .w3-half img:hover {
-      opacity: 1
-    }
-
-    .w3-red,
-    .w3-hover-red:hover {
-      color: #fff !important;
-      background-color: #004578 !important;
-    }
-
-    .w3-text-red,
-    .w3-hover-text-red:hover {
-      color: #004578 !important;
-    }
-
-
-
-    .w3-white,
-    .w3-hover-white:hover {
-      color: #fff !important;
-      text-decoration: underline;
-
-    }
-
-    .w3-button:hover {
-      color: #fff !important;
-      background-color: #004578 !important;
-      text-decoration: underline;
-
-
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Dolega | Power Platform Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
 <body>
-
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
-    id="mySidebar"><br>
-    <!--
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
-      style="width:100%;font-size:22px">Zamknij menu</a>
-
--->
-    <div class="w3-container">
-      <h3 class="w3-padding-64"><b>Techinfor</b></h3>
-    </div>
-    <div class="w3-bar-block">
-      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Start</a>
-      <a href="#powerplatform" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Power Platform</a>
-      <a href="#microsoft365" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Microsoft 365</a>
-      <a href="#webcon" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Webcon</a>
-      <a href="#kontakt" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Kontakt</a>
-    </div>
-  </nav>
-
-  <!-- Top menu on small screens -->
-  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-    <span>Techinfor</span>
-  </header>
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-    id="myOverlay"></div>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-    <!-- Usługi -->
-    <div class="w3-container" id="powerplatform" style="margin-top:50px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Usługi</b></h1>
-      <hr style="width:50px;border:5px solid #004578" class="w3-round">
-      <p>
-        Wdrażasz w swojej organizacji Microsoft Power Paltform, Microsoft 365 lub Webcon i potrzebujesz wsparcia? -
-        zapraszam do <a href="#kontakt">kontaktu</a> :)
-      </p>
-    </div>
-
-    <!-- Power Platform -->
-    <div class="w3-container" id="powerplatform" style="margin-top:30px">
-      <h1 class="w3-xxlarge w3-text-red"><b>Microsoft Power Platform</b></h1>
-      <p>
-        Microsoft Power Platform to zestaw narzędzi niskokodowych, które umożliwiają tworzenie aplikacji i botów,
-        automatyzację
-        procesów biznesowych, analizę danych oraz tworzenie stron internetowych. Składa się z pieciu głównych
-        komponentów: Power Apps, Power Automate, Power BI, Copilot Studio oraz Power Pages. Dzięki Power Platform,
-        użytkownicy mogą szybko i efektywnie tworzyć rozwiązania dostosowane do swoich potrzeb biznesowych, bez
-        konieczności
-        zaawansowanej wiedzy programistycznej.
-      </p>
-    </div>
-
-    <!-- Micrsoft 365 -->
-    <div class="w3-container" id="microsoft365" style="margin-top:30px">
-      <h1 class="w3-xxlarge w3-text-red"><b>Microsoft 365</b></h1>
-
-      <p>
-        Microsoft 365 to kompleksowa platforma chmurowa, która oferuje narzędzia do współpracy, komunikacji i
-        zarządzania danymi. Umożliwia użytkownikom dostęp do aplikacji i usług z dowolnego miejsca, zapewniając
-        jednocześnie bezpieczeństwo i zgodność z przepisami. Dzięki integracji z różnymi urządzeniami i systemami
-        operacyjnymi, wspiera efektywność pracy zespołowej i indywidualnej.
-      </p>
-    </div>
-
-    <!-- Webcon -->
-    <div class="w3-container" id="webcon" style="margin-top:30px">
-      <h1 class="w3-xxlarge w3-text-red"><b>Webcon</b></h1>
-      <p>
-        WEBCON BPS to platforma low-code do automatyzacji procesów biznesowych. Umożliwia tworzenie aplikacji bez
-        potrzeby kodowania, co przyspiesza wdrażanie rozwiązań. Dzięki temu firmy mogą zwiększyć efektywność pracy i
-        szybko reagować na zmieniające się potrzeby biznesowe.
-      </p>
-    </div>
-
-    <!-- Kontakt -->
-    <!-- https://prod-97.westeurope.logic.azure.com:443/workflows/712645dffc934514885341f1833933b9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TQTJwkdVjfPw3jZi0D9pdGIMm_roDnKOqiSrgqte1rQ-->
-    <div class="w3-container" id="kontakt" style="margin-top:30px">
-      <h1 class="w3-xxlarge w3-text-red"><b>Kontakt</b></h1>
-      <p>Wdrażasz jedną z powyższych technologii w swojej organizacji i potrzebujesz wsparcia - zapraszam do kontaktu :)
-      </p>
-
-      <div class="form-container">
-        <div class="w3-section">
-          <label for="name">Imię i nazwisko:</label>
-          <input class="w3-input w3-border" type="text" id="name" name="name">
+    <nav class="navigation">
+        <div class="max-width">
+            <div class="logo">
+                Adam Dolega |
+                <span>Power Platform Developer</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#About">About me</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="hamburgerMenu">
+                <i class='bx bx-menu bars'></i>
+            </button>
         </div>
-        <div class="w3-section">
-          <label for="email">Adres email:</label>
-          <input class="w3-input w3-border" type="text" id="email" name="email">
+    </nav>
+
+    <section class="sectionMain">
+        <div class="max-width">
+            <div class="leftContent">
+                <div class="text1">
+                    Hi! My name is
+                </div>
+                <div class="text2">
+                    Adam Dolega
+                </div>
+                <div class="text3">
+                    and I'am Power Platform Developer
+                </div>
+
+                <button class="contactMe" id="contact">Contact</button>
+
+            </div>
+            <div class="rightContent">
+                <img src="images/ms.svg" width="100%" height="100%" &="Main image">
+            </div>
         </div>
-        <div class="w3-section">
-          <label for="email">Wiadomość:</label>
-          <textarea class="w3-input w3-border" id="message" name="message" rows="5"
-            style="resize: vertical;"></textarea>
+    </section>
+
+    <section class="aboutMe" id="About">
+        <div class="max-width">
+            <h2>
+                About me
+            </h2>
+            <div class="line">
+                <div class="underline"></div>
+            </div>
+            <p class="aboutMe">
+                Hello, my name is Adam, and I am passionate about Microsoft technology. I specialize in helping
+                organizations develop solutions using Power Platform (Power Apps, Power Automate, and Copilot Studio)
+                and optimize their use of Microsoft 365 services. If you would like to learn more about my experience,
+                feel free to visit my <a href="https://www.linkedin.com/in/adamdolega/">LinkedIn profile</a>.
+            </p>
         </div>
-        <div class="w3-section">
-          <p style="font-size: 12px">Administratorem Twoich danych osobowych jest Techinfor - Adam Dolega. Dane osobowe podane w formularzu
-            kontaktowym będą przetwarzane w celu odpowiedzi na Twoje zapytanie oraz prowadzenia dalszej korespondencji.
-            Podanie danych jest dobrowolne, ale niezbędne do realizacji powyższego celu. Masz prawo dostępu do swoich
-            danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia
-            danych oraz wniesienia sprzeciwu wobec przetwarzania.</p>
-          <button class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" type="button"
-            onclick="handleSubmit()">Wyślij wiadomość</button>
+    </section>
+
+    <section class="contact" id="Contact">
+        <div class="max-width">
+            <h2>
+                Contact
+            </h2>
+            <div class="line">
+                <div class="underline"></div>
+            </div>
+            <div class="contactContainer">
+                <div class="contactForm">
+                    <form id="contactForm">
+                        <label for="name">Your Name</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email address</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Message</label><br>
+                        <textarea id="message" name="message" cols="40" rows="5" required></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="address">
+                    <p>
+                        TECHINFOR - Adam Dolega<br>
+                        Grzybowska 87<br>
+                        00-844 Warszawa<br><br>
+                    </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.602675227896!2d20.97574601579674!3d52.23243607976083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc9d32700001%3A0x73e368b918fe1f73!2sGrzybowska%2087%2C%2000-844%20Warszawa!5e0!3m2!1spl!2spl!4v1663832269932!5m2!1spl!2spl"
+                        width="100%" height="259" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footerText">
+            Graphic design and implementation by <span>Adam Dolega</span><br>
+        </p>
+    </footer>
+
+    <i class='bx bx-up-arrow-alt scroll-up up-arrow' id="scroll-up"></i>
+
+    <div class="message-sent" id="messageSent" style="display: none;">
+        Message sent!
     </div>
 
-    <!-- End page content -->
-  </div>
-
-  <!-- W3.CSS Container -->
-  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-    <p class="w3-right">TECHINFOR - ADAM DOLEGA | Grzybowska 87, 00-844 Warszawa | Powered by <a
-        href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-        class="w3-hover-opacity">w3.css</a></p>
-  </div>
-
-  <script>
-
-    function handleSubmit()
-    {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      const url = `https://prod-97.westeurope.logic.azure.com:443/workflows/712645dffc934514885341f1833933b9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TQTJwkdVjfPw3jZi0D9pdGIMm_roDnKOqiSrgqte1rQ&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
-      window.open(url, '_blank')
-    }
-
-
-
-    // Script to open and close sidebar
-    function w3_open()
-    {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close()
-    {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
-
-    // Modal Image Gallery
-    function onClick(element)
-    {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-
-  </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
