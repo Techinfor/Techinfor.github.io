@@ -1,3 +1,3 @@
-# Techinfor.github.io
+# Techinfor | Adam Dolega
 
-Portfolio website.
+Techinfor website.
