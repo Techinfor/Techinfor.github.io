@@ -26,7 +26,6 @@ const sendMessage = (message, messageText) => {
 };
 
 // send contact form to Power Automate using XHR
-
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
@@ -67,47 +66,3 @@ document
 
     xhr.send(JSON.stringify(data));
   });
-
-// send contact form to Power Automate using FETCH
-
-/*
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const data = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
-
-    const message = document.getElementById("messageSent");
-
-    sendMessage(message, "Sending form...");
-
-    fetch(
-      "https://prod-165.westeurope.logic.azure.com:443/workflows/283e43e30b88441fbf68555cf67f8399/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RnsKABVFv7dr1oTbZZxmOTpQZi7Yn2wZCptaKGOiNg8",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-        sendMessage(message, "Form sent");
-        document.getElementById("contactForm").reset();
-        setTimeout(() => {
-          message.style.display = "none";
-        }, 1000);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  });
-
-  */
