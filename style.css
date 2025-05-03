@@ -4,11 +4,6 @@
   --font-family: "Ubuntu", sans-serf;
   --bg-color: #f8f8f8;
   --text-color: #393939;
-  /*
-    --first-color: #EF4629;
-    --first-color: #d83b01;
-    --second-color: #BAE4F2;
-    */
   --first-color: #0064b5;
   --second-color: #0064b5;
 }
@@ -48,7 +43,7 @@ p {
 }
 
 .leftContent {
-  line-height: 60px;
+  line-height: 90px;
 }
 
 .navigation .max-width {
@@ -88,7 +83,6 @@ p {
 .sectionMain {
   color: var(--text-color);
   display: flex;
-  /* height: 80vh; */
   height: auto;
   width: 100%;
   background-color: var(--bg-color);
@@ -122,7 +116,6 @@ p {
   background-color: var(--first-color);
   border: none;
   color: white;
-  /*padding: 15px 32px;*/
   text-align: center;
   font-size: 21px;
   font-weight: 500;
@@ -167,86 +160,6 @@ p {
 
 .aboutMe p {
   margin-bottom: 30px;
-}
-
-/* Project section */
-
-.projects .max-width {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 60px;
-}
-
-.projects .max-width .projectList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.projects .max-width .projectList img {
-  max-width: 32.5%;
-  height: auto;
-}
-
-/* Skills section */
-
-.skills .max-width {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 60px;
-}
-
-.skills .max-width .skillsBars {
-  margin-bottom: 40px;
-}
-
-.skills .max-width .skillsBars .infoBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 7px;
-}
-
-.skills .max-width .skillsBars .infoBar span {
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.skills .max-width .skillsBars .progressBar {
-  width: 100%;
-  height: 10px;
-  background: var(--bg-color);
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.skills .max-width .skillsBars .progressBar .html {
-  width: 90%;
-  height: 10px;
-  background: var(--second-color);
-  border-radius: 10px;
-}
-
-.skills .max-width .skillsBars .progressBar .css {
-  width: 70%;
-  height: 10px;
-  background: var(--second-color);
-  border-radius: 10px;
-}
-
-.skills .max-width .skillsBars .progressBar .js {
-  width: 80%;
-  height: 10px;
-  background: var(--second-color);
-  border-radius: 10px;
-}
-
-.skills .max-width .skillsBars .progressBar .react {
-  width: 60%;
-  height: 10px;
-  background: var(--second-color);
-  border-radius: 10px;
 }
 
 /* Contact section */
@@ -411,32 +324,6 @@ input[type="submit"] {
   .sectionMain .max-width,
   .skills .max-width {
     padding: 0 30px;
-  }
-
-  .text3 {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects .max-width .projectList {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .projects .max-width .projectList img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .logoSmall {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
   }
 
   .text3 {
