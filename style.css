@@ -40,10 +40,12 @@ p {
   background-color: var(--bg-color);
   width: 100%;
   padding: 38px 0;
+  position: fixed;
+  height: 100px;
 }
 
 .leftContent {
-  line-height: 70px;
+  line-height: 60px;
 }
 
 .navigation .max-width {
@@ -86,6 +88,7 @@ p {
   height: auto;
   width: 100%;
   background-color: var(--bg-color);
+  padding-top: 70px;
 }
 
 .sectionMain .max-width {
@@ -96,7 +99,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 }
 
 .sectionMain .text1 {
@@ -282,10 +285,12 @@ input[type="submit"] {
   .aboutMe .max-width,
   .contact .max-width,
   .navigation .max-width,
-  .projects .max-width,
-  .sectionMain .max-width,
-  .skills .max-width {
+  .sectionMain .max-width {
     padding: 0 40px;
+  }
+
+  .sectionMain .max-width {
+    padding-top: 60px;
   }
 
   .sectionMain .rightContent {
@@ -320,10 +325,12 @@ input[type="submit"] {
   .aboutMe .max-width,
   .contact .max-width,
   .navigation .max-width,
-  .projects .max-width,
-  .sectionMain .max-width,
-  .skills .max-width {
+  .sectionMain .max-width {
     padding: 0 30px;
+  }
+
+  .sectionMain .max-width {
+    padding-top: 60px;
   }
 
   .text3 {
