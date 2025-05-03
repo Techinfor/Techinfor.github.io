@@ -1,5 +1,5 @@
-// scroll to top functionality
-const scrollUp = document.querySelector("#scroll-up");
+//scroll to top functionality
+const scrollUp = document.querySelector("#buttonUp");
 
 scrollUp.addEventListener("click", () => {
   window.scrollTo({
@@ -9,15 +9,12 @@ scrollUp.addEventListener("click", () => {
   });
 });
 
-// scroll to top functionality
-const scrollToContact = document.querySelector("#contact");
+//scroll to contact
 
-scrollToContact.addEventListener("click", () => {
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    left: 0,
-    behavior: "smooth",
-  });
+buttonContact.addEventListener("click", () => {
+  const buttonContact = document.querySelector("#buttonContact");
+  const contactSection = document.getElementById("Contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
 });
 
 const sendMessage = (message, messageText) => {
