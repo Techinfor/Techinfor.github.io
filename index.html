@@ -2,6 +2,174 @@
 <html lang="pl">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warsztaty Power Automate Desktop - Formularz zamówienia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-align: left;
+      margin-left: 5%;
+    }
+
+
+    input,
+    select {
+      width: 90%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      appearance: none;
+      background-color: white;
+    }
+
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .record {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #3498db;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Warsztaty Power Automate Desktop</h1>
+  <h2>Ćwiczenie 1 - Formularz zamówienia</h2>
+  <div class="container">
+    <form id="orderForm">
+      <label for="company">Firma</label>
+      <input type="text" id="company" required />
+
+      <label for="date">Data</label>
+      <input type="date" id="date" required />
+
+      <label for="value">Wartość</label>
+      <input type="number" id="value" required />
+
+      <label for="category">Kategoria</label>
+      <select id="category" required>
+        <option value="">-- Wybierz kategorię --</option>
+        <option value="Sprzęt">Sprzęt</option>
+        <option value="Usługa">Usługa</option>
+        <option value="Oprogramowanie">Oprogramowanie</option>
+      </select>
+
+      <button type="submit">Dodaj zamówienie</button>
+    </form>
+
+    <div id="recordList"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const recordList = document.getElementById('recordList');
+
+    function generateOrderNumber() {
+      const randomNumber = Math.floor(10000 + Math.random() * 90000);
+      return `ZAM-${randomNumber}`;
+    }
+
+    function loadRecords() {
+      const records = JSON.parse(sessionStorage.getItem('orders')) || [];
+      recordList.innerHTML = '';
+
+      if (records.length > 0) {
+        const record = records[records.length - 1]; // ostatni element
+        const div = document.createElement('div');
+        div.className = 'record';
+        div.innerHTML = `
+      <strong>Numer zamówienia:</strong> ${record.orderNumber}<br>
+      <strong>Firma:</strong> ${record.company}<br>
+      <strong>Data:</strong> ${record.date}<br>
+      <strong>Wartość:</strong> ${record.value} zł<br>
+      <strong>Kategoria:</strong> ${record.category}
+    `;
+        recordList.appendChild(div);
+      }
+    }
+
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const order = {
+        orderNumber: generateOrderNumber(),
+        company: form.company.value,
+        date: form.date.value,
+        value: form.value.value,
+        category: form.category.value
+      };
+
+      const records = JSON.parse(sessionStorage.getItem('orders')) || [];
+      records.push(order);
+      sessionStorage.setItem('orders', JSON.stringify(records));
+      form.reset();
+      loadRecords();
+    });
+
+    window.addEventListener('load', loadRecords);
+  </script>
+</body>
+
+</html>
+<!--
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,3 +291,4 @@
 </body>
 
 </html>
+-->
