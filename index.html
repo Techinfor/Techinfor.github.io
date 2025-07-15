@@ -132,7 +132,7 @@
         const div = document.createElement('div');
         div.className = 'record';
         div.innerHTML = `
-      <strong>Numer zamówienia: </strong><span>${record.orderNumber}</span><br>
+      <strong>Numer zamówienia: </strong><span id="orderNumber">${record.orderNumber}</span><br>
       <strong>Firma: </strong>${record.company}<br>
       <strong>Data: </strong>${record.date}<br>
       <strong>Wartość: </strong>${record.value} zł<br>
